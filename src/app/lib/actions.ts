@@ -1,9 +1,9 @@
 'use server';
 
-import { signIn } from '@/auth';
+import { signIn } from '@/app/lib/auth/login';
 import { AuthError } from 'next-auth';
-
-// ...
+import { createAccount } from '@/app/lib/auth/create';
+import { redirect } from 'next/navigation';
 
 export async function authenticate(
     prevState: string | undefined,
@@ -23,4 +23,20 @@ export async function authenticate(
         }
         throw error;
     }
+}
+
+export async function registerUser(prevState: string | undefined, formData: FormData) {
+    const username = formData.get('username');
+    const password = formData.get('password');
+  
+    const result = await createAccount({ username, password });
+    if (!result.success) {
+      return result.error;
+    }
+  
+    // // Auto-login after signup (optional)
+    // await signIn('credentials', { username, password });
+    redirect('/login');
+  
+    return 'Success';
 }

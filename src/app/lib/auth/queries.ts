@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { eq } from 'drizzle-orm';
 import { db } from '../db';
-import { accounts } from '../schema';
+import { accounts, userStats } from '../schema';
 
 export const signupSchema = z.object({
     username: z.string().min(3).max(32),
@@ -19,5 +19,23 @@ export async function getUser(username: string) {
 export async function insertNewUser(username : string, passwordHash: string) {
     await db
         .insert(accounts)
-        .values({ username, passwordHash });
+        .values({ username, passwordHash })
+        .onConflictDoNothing();
+    await createUserStats(username);
+}
+
+export async function createUserStats(username: string) {
+    await db
+        .insert(userStats)
+        .values({ username, correctQuestions: [], incorrectQuestions: [] })
+        .onConflictDoNothing();
+}
+
+export async function getUserStats(username: string) {
+    await createUserStats(username);
+    const result = await db
+        .select()
+        .from(userStats)
+        .where(eq(userStats.username, username));
+    return { correctQuestions: result[0].correctQuestions, incorrectQuestions: result[0].incorrectQuestions};
 }

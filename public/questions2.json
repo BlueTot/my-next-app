@@ -1,0 +1,94 @@
+[
+    {
+        "question": "What are the seven data protection principles?",
+        "answer": ["Lawfulness", "Purpose", "Data-Minimisation", "Storage", "Security", "Accuracy", "Accountability"]
+    },
+    {
+      "question": "Area covered by a single legal system and a set of laws",
+      "answer": ["jurisdiction"]
+    },
+    {
+      "question": "England, Scotland, Wales, Northern Ireland (excluding Channel Islands, Isle of Man)",
+      "answer": ["United Kingdom"]
+    },
+    {
+      "question": "Organisation that has been incorporated to give it the same legal status as a natural person",
+      "answer": ["legal person"]
+    },
+    {
+      "question": "Court action under the criminal law",
+      "answer": ["criminal litigation"]
+    },
+    {
+      "question": "Organisation that prosecutes a person for a criminal offence",
+      "answer": ["crown prosecution service"]
+    },
+    {
+      "question": "Person being prosecuted in a criminal case",
+      "answer": ["defendant"]
+    },
+    {
+      "question": "Test used to prosecute a person on criminal law",
+      "answer": ["beyond reasonable doubt"]
+    },
+    {
+      "question": "A body of people chosen to listen to all facts in a court trial and decide guilt or innocence",
+      "answer": ["jury"]
+    },
+    {
+      "question": "Individual who oversees a court case and decides the penalties",
+      "answer": ["judge"]
+    },
+    {
+      "question": "Which of the following is NOT a reason for appeal in criminal law?",
+      "options": [
+        "Quash conviction",
+        "Order new trial",
+        "Increase penalty",
+        "Dismiss case"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Court action under the civil law",
+      "answer": ["civil litigation"]
+    },
+    {
+      "question": "Party that initiates a civil litigation",
+      "answer": ["claimant"]
+    },
+    {
+      "question": "Test used to prosecute a person on civil law",
+      "answer": ["balance of probabilities"]
+    },
+    {
+      "question": "Which of the following can result in a civil law case?",
+      "options": [
+        "Contracts",
+        "Libel",
+        "Family Law",
+        "Criminal activity"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which court in the hierarchy deals specifically with criminal cases?",
+      "options": [
+        "Magistrates",
+        "County Court",
+        "Crown Court",
+        "European Court of Justice"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which court typically handles civil cases without a jury?",
+      "options": [
+        "County Court",
+        "Supreme Court",
+        "Crown Court",
+        "Magistrates' Court"
+      ],
+      "answer": 0
+    }
+]

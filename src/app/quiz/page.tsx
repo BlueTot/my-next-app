@@ -84,7 +84,7 @@ export default function Quiz() {
                 setQuestions(data); // Set the questions state
             })
             .catch((error) => console.error("Error loading JSON:", error)); // Catch and log errors
-    }, []);
+    }, [loadNewQuestion]);
 
     // load new question, and set title
     useEffect(() => {

@@ -2,6 +2,7 @@ import SideNav from "../ui/dashboard/sidenav";
 import { auth } from "@/app/lib/auth/login";
 import { redirect } from "next/navigation";
 import { getUserStats } from "../lib/auth/queries";
+import Link from "next/link";
 
 export default async function Dashboard() {
 
@@ -18,6 +19,7 @@ export default async function Dashboard() {
     console.log(correctQuestions);
     console.log(incorrectQuestions);
 
+
     return (
         <>
             <h1>Dashboard</h1>
@@ -25,6 +27,12 @@ export default async function Dashboard() {
             <p>Correct questions: {correctQuestions}</p>
             <p>Incorrect questions: {incorrectQuestions}</p>
             <SideNav></SideNav>
+            <Link
+                href="/quiz"
+                className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+            >
+            Quiz
+            </Link>
         </>
     );
 }
